@@ -30,7 +30,7 @@ def find_alphabet_occurrence_array(string):
     for char in string:
       if not char.isalpha():
         continue
-      arr_index = ord(char) - ord("a");
+      arr_index = ord(char) - ord("a")
       alphabet_occurrence_array[arr_index] += 1
 
 
