@@ -26,31 +26,6 @@ print(find_alphabet_occurrence_array())
   # 6. 각 배열의 빈도수를 알아내어 더해준다 => alphabet_occurrence_array[alpha_index] += 1
   # 7. 결과값을 되돌려준다. => return(alphabet_occurrence_array)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  # 1.함수와 입력값을 받을 파라미터를 생성한다. => def find_alphabet_occurrence_array(string):
-  # 2. 알파벳 개수인 26개만큼의 0으로 초기화 된 26개의 배열을 변수에 담아 만들어 준다 => alphabet_occurrence_array = [0] * 26 
-  # 3. for 문을 통해 문자열을 변수에 모아준다 => for char in string:
-  # 4. if 문을 통해 알파벳인지 아닌지 확인한다 => if not char.isalpha()
-  # 5. ord 함수로 인덱스를 측정한다. => index_array = ord(char) - ord('a')
-  # 6. 각 인덱스에 알파벳이 등장한 빈도수 대로 1씩 더해준다 => 배열[인덱스] += 1 => alphabet_occurrence_array[index_array] += 1
-  # 7. 각 빈도수가 추가된 배열을 돌려준다 => return alphabet_occurrence_array
-  # 8. 값을 찍어준다 => print(find_alphabet_occurrence_array("hello my name is sparta"))
-
-
 # Tip
   # 1) 문자열인지 확인하는 방법 => 배열 내 공백 즉 스페이스 바 띄어쓰기를 제외하기 위함.
     # 1-1. 문자열이 알파벳인지 확인하는 방법 => 파이썬 내장함수 str.isalpha()
