@@ -22,6 +22,7 @@ print(find_alphabet_occurrence_array())
   # 2. 알파벳의 개수 만큼의 초기값이 0 26개인 배열을 생성한다. => alphabet_occurrence_array = [0] * 26
   # 3. for문을 통해 문자열을 변수에 저장한다. => for in char array:
   # 4. if조건문을 통해 입력값이 알파벳인지 확인한다. => if not char.isalpha()
+  # 4-1. 알파벳이 아니라면 다음 문자를 본다 => continue
   # 5. 인덱스를 알아낸다 => alpha_index = ord(char) - ord(a);
   # 6. 각 배열의 빈도수를 알아내어 더해준다 => alphabet_occurrence_array[alpha_index] += 1
   # 7. 결과값을 되돌려준다. => return(alphabet_occurrence_array)
