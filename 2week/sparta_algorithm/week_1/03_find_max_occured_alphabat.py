@@ -13,6 +13,7 @@ def find_max_occurred_alphabet(string):
 
     for alphabet in alphabet_array:
       occurrence = 0
+      # 알파벳(alphabet_array)과 입력값(string)을 비교
       for char in string:
         if char == alphabet:
           occurrence += 1

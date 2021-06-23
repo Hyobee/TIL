@@ -3,19 +3,20 @@
 # 주어진 문지열 
 # "hello my name is sparta"
 
-  # 어떤 알파벳 => 알파벳의 개수만큼 배열을 생성
-  # 가장 많은빈도수 => index값을 구한다. => 초기값을 0으로 시작하여 문자열을 돌려서 나올 떄마다 1씩 추가
-
 def find_alphabet_occurrence_array(string):
   alphabet_occurrence_array = [0] * 26
 
-  for in char string:
+  for char in string:
     if not char.isalpha():
       continue
-    alpha_index = ord(char) - ord(a);
-    alphabet_occurrence_array[alpha_index] += 1
-  return alphabet_occurrence_array
-print(find_alphabet_occurrence_array())
+    arr_index = ord(char) - ord("a")
+    alphabet_occurrence_array[arr_index] += 1
+
+  return result = find_max_occurred_alphabet(input)
+print(result)
+
+
+print(find_alphabet_occurrence_array("hello my name is sparta"))
 
 
   # 1. 함수를 생성하는데 입력값을 받을 수 있는 파라미터와 함께 생성해준다. => def find_alphabet_occurrence_array(string):
@@ -23,7 +24,7 @@ print(find_alphabet_occurrence_array())
   # 3. for문을 통해 문자열을 변수에 저장한다. => for in char array:
   # 4. if조건문을 통해 입력값이 알파벳인지 확인한다. => if not char.isalpha()
   # 4-1. 알파벳이 아니라면 다음 문자를 본다 => continue
-  # 5. 인덱스를 알아낸다 => alpha_index = ord(char) - ord(a);
+  # 5. 인덱스를 알아낸다 => alpha_index = ord(char) - ord('a');
   # 6. 각 배열의 빈도수를 알아내어 더해준다 => alphabet_occurrence_array[alpha_index] += 1
   # 7. 결과값을 되돌려준다. => return(alphabet_occurrence_array)
 
