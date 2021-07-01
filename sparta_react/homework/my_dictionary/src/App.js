@@ -10,14 +10,22 @@ import Create from "./Create";
 
 class App extends React.Component {
 
-  constructor(props){
+  constructor(props) {
     super(props);
-    this.state={
-      word: '단어',
-      page: 'create',
-      desc: '단어설명',
+    // App 컴포넌트의 state를 정의해줍니다.
+    this.state = {
+      list: ["영화관 가기", "매일 책읽기", "수영 배우기"],
     };
   }
+
+  // constructor(props){
+  //   super(props);
+  //   this.state={
+  //     word: '단어',
+  //     page: 'create',
+  //     desc: '단어설명',
+  //   };
+  // }
   
   render(){
     return (
