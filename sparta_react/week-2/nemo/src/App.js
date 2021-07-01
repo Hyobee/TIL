@@ -1,4 +1,5 @@
 import React from "react";
+import Nemo from "./Nemo";
 
 class App extends React.Component {
   constructor(props) {
