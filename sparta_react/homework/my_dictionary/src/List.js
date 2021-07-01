@@ -1,51 +1,13 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
+import { useSelector } from "react-redux";
 
-// 임시데이터
-// 주의) "" 안에서 또 ""를 쓸 수 없어요! ''를 대신 써주세요. :)
-const _word_list = [
-    {
-        id: "list_0",
-        word: "ㅎ1ㅎ1",
-        desc: "히히를 변형한 단어. 숫자 1을 'ㅣ'로 쓴다.",
-        example: "저 친구가 초콜릿을 줬어. ㅎ1ㅎ1",
-    },
-    {
-        id: "list_1",
-        word: "ㅎ1ㅎ1",
-        desc: "히히를 변형한 단어. 숫자 1을 'ㅣ'로 쓴다.",
-        example: "저 친구가 초콜릿을 줬어. ㅎ1ㅎ1",
-    },
-    {
-        id: "list_2",
-        word: "ㅎ1ㅎ1",
-        desc: "히히를 변형한 단어. 숫자 1을 'ㅣ'로 쓴다.",
-        example: "저 친구가 초콜릿을 줬어. ㅎ1ㅎ1",
-    },
-    {
-        id: "list_3",
-        word: "ㅎ1ㅎ1",
-        desc: "히히를 변형한 단어. 숫자 1을 'ㅣ'로 쓴다.",
-        example: "저 친구가 초콜릿을 줬어. ㅎ1ㅎ1",
-    },
-];
 
 const List = (props) => {
-    const [word_list, setWordList] = React.useState(_word_list);
+    // const [word_list, setWordList] = React.useState(_word_list);
 
-    //   state에 가짜 데이터 하나를 넣는 함수예요.
-    const addWord = () => {
-        // 넣을 가짜 데이터
-        const word_item = {
-            id: 'word_11111123132',
-            word: "ㅎ2ㅎ2",
-            desc: "안녕이라는 뜻",
-            example: "펄이 ㅎ2ㅎ2!"
-        };
-
-        //   스프레드 문법을 써서 word_list에 있던 값을 전부 넣어주고, 추가할 데이터도 뒤에 넣어서 추가합니다.
-        setWordList([...word_list, word_item]);
-    };
+    //   리덕스에 있는 데이터를 가져와요!
+    const word_list = useSelector((state) => state.word.word_list);
 
     return(
         <React.Fragment>
@@ -64,8 +26,6 @@ const List = (props) => {
                             </Card>
                         );
                     })}
-                    {/* state에 값을 추가하기 위해 임시 추가 버튼을 하나 만들어줬어요. 누르면 가짜 데이터 하나가 바로 추가되게 해줄거예요. */}
-                    <button onClick={addWord}>임시 추가 버튼</button>
                     <AddButton
                         onClick={() => {
                         props.history.push("/create");

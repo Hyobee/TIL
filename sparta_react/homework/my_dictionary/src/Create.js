@@ -1,7 +1,12 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
+
+import { useDispatch } from "react-redux";
+import { createWord } from "./redux/modules/word";
 
 const Create = (props) => {
+    const dispatch = useDispatch();
+
     const word_ref = React.useRef(null);
     const desc_ref = React.useRef(null);
     const example_ref = React.useRef(null);
@@ -21,8 +26,10 @@ const Create = (props) => {
             example: example_ref.current.value
         }
     
-        // 아직 리덕스 연결 전이니까 여기에 콘솔로만 찍어볼게요.
-        console.log(word);
+        // 리덕스에 가짜 데이터를 넣어볼게요!
+        dispatch(createWord(word));
+        // 데이터를 넣고 나면 목록 페이지로 이동합시다.
+        props.history.replace('/');
     }
 
     return(
