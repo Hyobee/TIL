@@ -4,12 +4,13 @@ import {BrowserRouter} from "react-router-dom";
 
 import styled from "styled-components";
 
+import { firestore } from "./firebase";
+
 import List from "./List";
 import Create from "./Create";
 
 
 const App = () => {
-  
   return (
     <React.Fragment>
         <BrowserRouter>
