@@ -1,7 +1,7 @@
 import React from "react";
 import { Grid, Text, Input, Button } from "../elements";
 
-const SignUp = (props) => {
+const Signup = (props) => {
   return (
     <React.Fragment>
       <Grid padding="16px">
@@ -55,6 +55,6 @@ const SignUp = (props) => {
   );
 };
 
-SignUp.defaultProps = {};
+Signup.defaultProps = {};
 
-export default SignUp;
+export default Signup;
